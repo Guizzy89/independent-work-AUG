@@ -14,9 +14,10 @@ namespace independent_work_AUG.Models
         public string ProblemDescription { get; set; } // Описание проблемы        
         public DateTime UpdatedAt { get; set; } // Дата последнего обновления заявки
         public StatusEnum Status { get; set; } // Статус заявки
-        public virtual Client Client { get; set; } // Клиент, создавший заявку
-        public virtual Employee ResponsibleEmployee { get; set; } // Ответственный сотрудник
-        public virtual ICollection<Comment> Comments { get; set; } // Комментарии к заявке
+        public string Client { get; set; } // Клиент, создавший заявку
+        public string ClientEMail { get; set; } // Клиент, создавший заявку
+        public string Employee { get; set; } // Ответственный сотрудник
+        public string Comment { get; set; } // Комментарии к заявке
     }
 
     public enum StatusEnum
